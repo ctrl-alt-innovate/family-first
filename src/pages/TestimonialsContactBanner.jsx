@@ -28,19 +28,40 @@ const TesitomonialsContactBanner = () => {
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           <Grid item xs={12} sm={4} display="flex" alignItems="center" gap={2}>
             <LocationOnIcon fontSize="large" />
-            <Typography variant="body1">
-              38 Coffman’s Hill Drive Glenwood AR<br />71943
+            <Typography variant="body1" align="center" component="a"
+              href="https://www.google.com/maps?q=38+Coffman+Hill+Drive+Glenwood+AR+71943"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              38 Coffman Hill Drive <br /> Glenwood AR 71943
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4} display="flex" alignItems="center" gap={2}>
             <PhoneIcon fontSize="large" />
-            <Typography variant="body1">
+            <Typography variant="body1" component="a"
+              href="tel:+18708281782"
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
               (870) 828-1782
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4} display="flex" alignItems="center" gap={2}>
             <EmailIcon fontSize="large" />
-            <Typography variant="body1" noWrap>
+            <Typography
+              component="a"
+              href="mailto:hotspringsfamilyfirstcare5@gmail.com"
+              noWrap
+              sx={{
+                fontSize: {
+                  xs: '.9rem',
+                  sm: '1rem',
+                },
+                fontWeight: 400,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
               hotspringsfamilyfirstcare5@gmail.com
             </Typography>
           </Grid>

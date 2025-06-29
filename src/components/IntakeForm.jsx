@@ -83,6 +83,14 @@ const IntakeForm = () => {
       personalCare: formData.personalCare || "None",
     };
 
+    const requiredFields = ['membersName', 'dob', 'age', 'gender', 'phoneNumber', 'emailAddress'];
+    const hasEmptyRequired = requiredFields.some((field) => !formData[field]?.trim());
+
+    if (hasEmptyRequired) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
     emailjs
       .send(
         "service_a9y56ne",
@@ -134,6 +142,7 @@ const IntakeForm = () => {
               name="membersName"
               value={formData.membersName}
               onChange={handleChange}
+              required
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -143,6 +152,7 @@ const IntakeForm = () => {
               name="dob"
               value={formData.dob}
               onChange={handleChange}
+              required
      
             />
           </Grid>
@@ -155,6 +165,7 @@ const IntakeForm = () => {
               onChange={handleChange}
               type="number"
               inputProps={{ min: 0 }}
+              required
             />
           </Grid>
 
@@ -165,6 +176,7 @@ const IntakeForm = () => {
               name="gender"
               value={formData.gender}
               onChange={handleChange}
+              required
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -194,6 +206,7 @@ const IntakeForm = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
               type="tel"
+              required
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -204,6 +217,7 @@ const IntakeForm = () => {
               value={formData.emailAddress}
               onChange={handleChange}
               type="email"
+              required
             />
           </Grid>
 

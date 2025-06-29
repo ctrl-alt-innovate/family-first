@@ -47,7 +47,7 @@ const features = [
     {
       icon: <Diversity3Icon color="primary" />,
       title: 'Community Integration',
-      desc: 'We are committed to breaking down barriers and promoting inclusion. We strive to ensure that our residents are seen as valued members of the Glenwood community.',
+      desc: 'We are committed to breaking down barriers and promoting inclusion. We strive to ensure that our residents are seen as valued members of our Arkansas communities.',
     },
     {
       icon: <SettingsAccessibilityIcon color="primary" />,

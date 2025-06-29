@@ -77,26 +77,42 @@ const ContactHero = () => {
                 mt: 4,
               }}
             >
-              <Box display="flex" alignItems="center" gap={2}>
+              <Box display="flex" alignItems="center" gap={1}>
                 <LocationOnIcon fontSize="large" />
                 <Typography variant="body1" align="center">
-                  38 Coffman’s Hill Drive<br />
+                  38 Coffman Hill Drive<br />
                   Glenwood AR 71943
                 </Typography>
               </Box>
 
-              <Box display="flex" alignItems="center" gap={2}>
+              <Box display="flex" alignItems="center" gap={1}>
                 <PhoneIcon fontSize="large" />
-                <Typography variant="body1" align="center">
-                  (870) 828-1782
-                </Typography>
+            <Typography variant="body1" component="a" align="center"
+              href="tel:+18708281782"
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              (870) 828-1782
+            </Typography>
               </Box>
 
-              <Box display="flex" alignItems="center" gap={2}>
+              <Box display="flex" alignItems="center" gap={1}>
                 <EmailIcon fontSize="large" />
-                <Typography variant="body1" align="center" noWrap>
-                  hotspringsfamilyfirstcare5@gmail.com
-                </Typography>
+            <Typography
+              component="a"
+              href="mailto:hotspringsfamilyfirstcare5@gmail.com"
+              noWrap
+              sx={{
+                fontSize: {
+                  xs: '.7rem',
+                  sm: '1rem',
+                },
+                fontWeight: 400,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              hotspringsfamilyfirstcare5@gmail.com
+            </Typography>
               </Box>
             </Box>
           </Container>
